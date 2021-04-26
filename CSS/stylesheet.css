@@ -1,0 +1,351 @@
+@font-face{
+    font-family: butler-med;
+    src: url(../FONTS/Butler/Butler_Regular.otf);
+}
+
+@font-face{
+    font-family: alex;
+    src:url('../FONTS/alex-brush/AlexBrush-Regular.ttf')
+}
+
+@font-face{
+    font-family: reey;
+    src: url('../FONTS/reey/Reey-Regular.otf');
+}
+
+@font-face{
+    font-family: oswald-med;
+    src: url('../FONTS/oswald/Oswald-Medium.ttf');
+}
+@font-face{
+    font-family: oswald-med-italic;
+    src: url('../FONTS/oswald/Oswald-MediumItalic.ttf');
+}
+@font-face{
+    font-family: oswald-light;
+    src: url('../FONTS/oswald/Oswald-Light.ttf');
+}
+@font-face{
+    font-family: oswald-light-italic;
+    src: url('../FONTS/oswald/Oswald-LightItalic.ttf');
+}
+@font-face{
+    font-family: oswald-bold;
+    src: url('../FONTS/oswald/Oswald-Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    background: url('../IMG/background_palm.jpg') top center/cover fixed;
+    font-family: oswald-light;
+  
+    line-height: 1.7em;
+
+    height: auto;
+
+}
+
+h1{
+    font-size: calc(1.5em + 0.5vw);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+h2{
+   font-size: calc(1.2em + 0.5vw);
+   padding-top: 1em;
+   padding-bottom: 1em;
+}
+h3{
+   font-size: calc(1em + 0.5vw);
+}
+h4{
+   font-size: calc(0.8em + 0.5vw);
+}
+h5{
+   font-size: calc(0.5em + 0.5vw);
+}
+
+p, a, table, ul, button{
+    font-size: calc(0.8em + 0.5em);
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 50vh 100vh 90vh 20vh;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header"
+      "top"
+      "middle"
+      "bottom"
+      "footer";
+  
+  }
+  
+  header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "logo menuitems .";
+    grid-area: header;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+  }
+  header .hide{
+      opacity: 0;
+  }
+  
+  .menuitems {  
+        grid-area: menuitems;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+      
+    }
+
+    .menuitems a{
+        text-decoration: none;
+        color: black;
+        font-family: butler-med;
+        font-size: calc(0.9em + 0.5vw);
+    }
+    .menuitems a:hover{
+        text-decoration: underline;
+    
+    }
+  
+  .logo { 
+      grid-area: logo; 
+        font-family: reey;
+        font-size: calc(1.2em + 0.5vw);
+        padding: 0.5em;
+        margin-left: 1em;
+    }
+  
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "top-img top-text .";
+    grid-area: top;
+  }
+  
+  .top-img { 
+      grid-area: top-img; 
+      display: grid;
+      align-items: center;
+    }
+
+    .top-img img{
+        max-width: 70%;
+        margin-left: 5em;
+        margin-bottom: -150px;
+        z-index: 2;
+        border-radius: 50%;
+    }
+  
+  .top-text { 
+      grid-area: top-text;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;  
+      margin-left: 3em;
+    }
+  
+  .middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "leftbox middlebox rightbox";
+    grid-area: middle;
+    background-color: #E9EAEC;
+    align-items: center;
+    justify-items: center;
+    padding-top: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+  
+  .leftbox { 
+      grid-area: leftbox; 
+    }
+  
+  .middlebox { 
+      grid-area: middlebox; 
+     
+    }
+  
+    .box, .box-img-left, .box-img-right{
+       background-color: #272727;
+       width: 23vw;
+       height: 55vh;
+       padding:2em;
+        color: white;
+       text-align: center;
+   
+       
+    }
+.box{
+    width: 30vw;
+}
+
+    .box-img-left{
+        background-image: url('../IMG/morgan-richardson-azHvBhGB68g-unsplash.jpg');
+        background-position: top;
+        background-size: cover;
+    }
+
+    .box-img-right{
+        background-image: url('../IMG/ux-store-ukeUH3KbMWU-unsplash.jpg');
+        background-position: top;
+        background-size: cover;
+    }
+
+    .inner-box-right, .inner-box-left{
+        width: 23vw;
+        height: 55vh;
+       
+        margin-top: -55vh;
+        z-index: 2;
+        
+        display: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .inner-box-left{
+        grid-area:leftbox;
+    }
+    .inner-box-right{
+        grid-area: rightbox;
+    }
+
+    .inner-box-left ul{
+        list-style: none;
+    }
+
+  
+
+
+  .rightbox { grid-area: rightbox; }
+  
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bottom-left bottom-right";
+    grid-area: bottom;
+    
+  }
+  
+  .bottom-left { 
+      grid-area: bottom-left; 
+    }
+
+    #img-bottom{
+        background-image: url('../IMG/background_palm.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 90vh;
+
+    }
+  
+  .bottom-right { 
+      grid-area: bottom-right; 
+        background-color: #DCD5CD;
+        padding: 5em;
+    }
+  
+  footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "kontakt linkedin facebook instagram";
+    grid-area: footer;
+    background-color: rgb(233, 234, 236, 0.9);
+  }
+  
+  .kontakt { grid-area: kontakt; 
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+ 
+    padding-left: 5em;
+    padding-right: 5em;
+    }
+    .kontakt h4{
+        margin-bottom: 1em;
+    }
+.kontakt a{
+    font-size: calc(0.6em + 0.4em);
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.kontakt a:hover{
+    color: rgb(75, 75, 75);
+}
+
+  
+  .linkedin { grid-area: linkedin; }
+  
+  .facebook { grid-area: facebook; }
+  
+  .instagram { grid-area: instagram; }
+
+  .linkedin, .facebook, .instagram{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .linkedin a, .facebook a, .instagram a{
+    font-size: calc(0.8em + 0.2vw);
+    text-decoration: none;
+    color: black;
+  }
+footer img{
+    max-width: 30%;
+    padding: 1em;
+    align-self: center;
+}
+  .mainbutton{
+      background-color: #57625A;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 0.7em;
+      font-family: oswald-light;
+      margin: 1em;
+  }
