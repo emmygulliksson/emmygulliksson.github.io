@@ -1,0 +1,209 @@
+
+
+
+
+    .main {
+      grid-area: main;
+      margin: 5em;
+      margin-left: 10em;
+      display: grid;
+      grid-template-columns: 1fr 2fr 3fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "maintext maintext imgdisplay"
+        "strengths ambitions imgdisplay";
+    }
+
+.main-text{
+  grid-area: maintext;
+}
+
+.strengths{
+    grid-area: strengths;
+}
+
+.ambitions{
+    grid-area: ambitions;
+}
+
+ul{
+    list-style: none;
+}
+
+.images{grid-area: imgdisplay;
+padding: 5em;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  .slideshow-container img{
+      height: 260px;
+      width: 400px;
+      object-fit:contain;
+  
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  #firstpic{
+      display: block;
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(151, 149, 136, 0.4);
+
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+
+
+
+
+
+
+   
+   
+  .icons img{
+      width: 5.5vw;
+      padding-right: 2em;
+      padding-top: 2em;
+  }
+
+  
+
+
+  
+  footer {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "icons logo";
+    grid-area: footer;
+  
+   
+  }
+  .logo { 
+    grid-area: logo; 
+      font-family: reey;
+      font-size: calc(1.2em + 0.5vw);
+      margin-right: 1em;
+    text-align: right;
+    color: #DDDCD4;
+    padding-top: 3vh;
+  }
+
+  .icons{
+      grid-area: icons;
+      display: flex;
+      flex-direction: row;
+      align-content: flex-start;
+      justify-content: flex-end;
+  }
+  .icons img{
+    transition: transform .2s;
+  }
+
+
+  .icons img:hover{
+    transform: scale(1.3);
+  
+  }
+
+  
+
+  .mainbutton{
+      background-color: #57625A;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 0.7em;
+      font-family: oswald-light;
+      margin: 1em;
+  }
