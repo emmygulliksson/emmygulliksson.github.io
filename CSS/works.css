@@ -60,11 +60,15 @@
   /* Content */
   .content {
     border: solid 8px rgba(151, 149, 136, 0.4);
-   
+   min-height: 50vh;
     padding: 1.5em;
    
     color: #ffffff;
    
+  }
+
+  #database{
+    min-height: 60.5vh;
   }
 
   .content p {
