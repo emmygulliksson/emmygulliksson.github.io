@@ -42,32 +42,21 @@
  
 body,html{
    
-  background: linear-gradient(132deg,  #4C5247, #868574, #2f332d);
+  background: linear-gradient(132deg,  #292c27, #868574, #292c27);
   background-size: 400% 400%;
   animation: Gradient 15s ease infinite;
   position: relative;
-  height: 100vh;
+  height: auto;
   width: 100%;
   padding:0;
   margin:0px;
   font-family: oswald-light;
   line-height: 1.7em;
   color: rgb(240, 240, 240);
-  overflow: hidden;
+  overflow: auto;
   z-index: -2;
 }
 
-.background {
-  background: linear-gradient(132deg,  #3a3f37, #969481, #262924);
-  background-size: 400% 400%;
-  animation: Gradient 15s ease infinite;
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  padding:0;
-  margin:0px;
-}
 
 .cube {
   position: absolute;
@@ -187,6 +176,7 @@ p, a, table, ul, button{
     z-index: 5;
     top: 0;
     width: 100%;
+    backdrop-filter: blur(6px);
   }
   header .hide{
       opacity: 0;

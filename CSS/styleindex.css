@@ -122,5 +122,8 @@
 
     .main-text h3{
        
-        padding-bottom: 1em;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
     }
+
+    .w3-animate-left{position:relative;animation:animateleft 0.7s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
