@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10vh  140vh  15vh;
+  grid-template-rows: 10vh  150vh  15vh;
   gap: 0px 0px;
   grid-template-areas:
     "header"
@@ -228,13 +228,29 @@ padding: 5em;}
 }
 
 #backend, #frontend, #tools{
-  padding: 1em;
+  padding: 2em;
   border: solid 8px rgba(151, 149, 136, 0.4);
+  margin-right: 3em;
+  text-align: center;
+  height: fit-content;
+  float: left;
 
 }
+#backend img, #frontend img, #tools img{
+width: 40%;
+padding: 1em;
+}
+
+#backend h3, #frontend h3, #tools h3{
+  color: rgb(165, 163, 151);
+  padding: 0.5em;
+  margin-bottom: 1em;
+  }
 
 #backend{
   grid-area: back;
+
+
 }
 
 #frontend{
@@ -243,10 +259,28 @@ padding: 5em;}
 
 #tools{
   grid-area: tools;
+ 
 }
 
-#text{
+.skillstext{
   grid-area: text;
+  padding-bottom: 2em;
 }
 
-.w3-animate-left{position:relative;animation:animateleft 0.7s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+
+
+
+
+.w3-animate-left{
+  position:relative;
+  animation:animateleft 0.7s;
+ 
+}
+  
+  @keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+
+
+
+header{
+  backdrop-filter: blur(6px);
+}
