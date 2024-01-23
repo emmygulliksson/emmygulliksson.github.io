@@ -87,7 +87,7 @@ padding: 5em;}
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(151, 149, 136, 0.4);
+    background-color: rgba(253, 241, 238, 0.4);
 
   }
   
@@ -124,7 +124,7 @@ padding: 5em;}
   }
   
   .active, .dot:hover {
-    background-color: #C1CCAA;
+    background-color: #E7765A;
   }
   
   /* Fading animation */
@@ -182,7 +182,8 @@ padding: 5em;}
       font-size: calc(1.2em + 0.5vw);
       margin-right: 1em;
     text-align: right;
-    color: #DDDCD4;
+    color: #FDF1EE;
+    opacity: 0.9;
     padding-top: 3vh;
   }
 
@@ -229,7 +230,7 @@ padding: 5em;}
 
 #backend, #frontend, #tools{
   padding: 2em;
-  border: solid 8px rgba(151, 149, 136, 0.4);
+  border: solid 8px rgba(149, 149, 149, 0.4);
   margin-right: 3em;
   text-align: center;
   height: fit-content;
@@ -242,7 +243,7 @@ padding: 1em;
 }
 
 #backend h3, #frontend h3, #tools h3{
-  color: rgb(165, 163, 151);
+  color: #FDF1EE;
   padding: 0.5em;
   margin-bottom: 1em;
   }
