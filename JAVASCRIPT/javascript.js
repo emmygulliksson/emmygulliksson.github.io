@@ -1,7 +1,7 @@
 
 $(window).on("scroll", function() {
    if ($(this).scrollTop() > 10) {
-     $("header").css("background","rgb(178, 176, 154, 0.2)");
+     $("header").css("background","rgb(253, 241, 258, 0.1)");
       
    }
    else {
